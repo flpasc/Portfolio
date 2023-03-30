@@ -1,0 +1,9 @@
+.header {
+	padding: 2px;
+	display: grid;
+	grid-template-columns: 1fr 2fr 1fr;
+	grid-template-rows: repeat(2, 1fr);
+	height: clamp(40px, 15vh, 60px);
+
+	background-color: rgb(198, 92, 92);
+}

@@ -1,0 +1,22 @@
+.navbar {
+	display: flex;
+	align-items: flex-end;
+	justify-content: flex-end;
+	grid-area: 2 / 2 / -1 / -1;
+	font-size: 12px;
+}
+
+.navbar ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	display: grid;
+	grid-template-columns: repeat(4, auto);
+}
+
+.navbar li {
+	border: 1px solid black;
+	border-radius: 4px;
+	margin-inline: 2px;
+	padding: 2px 3px;
+}

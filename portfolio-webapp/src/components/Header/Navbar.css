@@ -1,22 +1,54 @@
+a {
+	text-decoration: none;
+	color: #b19f9e;
+}
+
 .navbar {
+	padding-bottom: 2px;
 	display: flex;
 	align-items: flex-end;
 	justify-content: flex-end;
 	grid-area: 2 / 2 / -1 / -1;
-	font-size: 12px;
+	font-size: 0.5rem;
 }
 
 .navbar ul {
 	padding: 0;
 	margin: 0;
 	list-style: none;
-	display: grid;
-	grid-template-columns: repeat(4, auto);
+	display: flex;
+	font-weight: 900;
+	gap: 0.1rem;
 }
 
 .navbar li {
-	border: 1px solid black;
+	box-shadow: 1px 1px 4px #b19f9e;
 	border-radius: 4px;
-	margin-inline: 2px;
-	padding: 2px 3px;
+	margin-inline: 0.1rem;
+	padding: 0.2rem 0.3rem;
+	transition: background-color 0.5s ease-in-out, box-shadow 1s ease-in-out,
+		transform 0.2s ease-in-out, border 1s ease-in-out, color 0.5s ease-in-out;
+}
+
+.navbar li:hover {
+	background-color: #cebc81;
+	box-shadow: 1px 1px 4px #b19f9e;
+	transform: scale(1.05);
+}
+
+.navbar a:hover {
+	color: black;
+}
+
+.active {
+	background-color: #cebc81;
+	box-shadow: none;
+}
+
+.active a {
+	color: black;
+}
+
+.active > li {
+	box-shadow: 2px 2px 14px #cebc81;
 }

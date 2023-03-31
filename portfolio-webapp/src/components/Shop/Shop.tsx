@@ -1,5 +1,5 @@
 import React from 'react'
 
 export default function Shop() {
-	return <div>Shop</div>
+	return <h1>Shop</h1>
 }

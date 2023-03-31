@@ -3,4 +3,32 @@
 	grid-area: 1 / 1 / -1 / 2;
 	justify-content: center;
 	align-items: center;
+	transition: transform 0.2s ease-in-out;
+}
+
+.logo a {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: rgba(255, 255, 255, 0.772);
+	font-size: 1rem;
+	transition: color 0.2s ease-in-out, transform 1s ease-in-out;
+}
+
+.logo:hover {
+	transform: scale(1.05);
+}
+
+a:hover {
+	color: white;
+}
+
+.blinking {
+	animation: blinker 3s alternate infinite;
+}
+
+@keyframes blinker {
+	50% {
+		opacity: 0;
+	}
 }

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useCallback, useState } from 'react'
 import './App.css'
 import Header from '../Header/Header'
 import About from '../About/About'
@@ -7,10 +7,12 @@ import Login from '../Login/Login'
 import Projects from '../Projects/Projects'
 import { Route, Routes } from 'react-router-dom'
 import Home from '../Home/Home'
+import ParticleBackground from '../ParticleBackground/ParticleBackground'
 
 function App() {
 	return (
 		<>
+			<ParticleBackground />
 			<Header />
 			<div className='container'>
 				<Routes>
@@ -24,5 +26,4 @@ function App() {
 		</>
 	)
 }
-
 export default App

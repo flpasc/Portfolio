@@ -15,12 +15,13 @@
 	width: clamp(80px, 50%, 160px);
 	height: 20px;
 	z-index: 1;
-	transition: background-color 0.2s ease-in-out, transform 0.3s ease-in-out;
+	transition: background-color 0.2s ease-in-out, transform 0.3s ease-in-out, color 0.5s ease-in-out;
 }
 
 .user:hover {
-	background-color: #a16e834c;
+	background-color: #de0c649f;
 	transform: scale(1.05);
+	color: white;
 }
 
 .user::before {
@@ -29,7 +30,7 @@
 	width: 150%;
 	height: 150%;
 	position: absolute;
-	animation: rotate 2s linear infinite;
+	animation: rotate 8s linear infinite;
 	box-shadow: 50px 50px 50px #479761;
 }
 

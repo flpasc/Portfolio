@@ -12,7 +12,6 @@ import ParticleBackground from '../ParticleBackground/ParticleBackground'
 function App() {
 	return (
 		<>
-			<ParticleBackground />
 			<Header />
 			<div className='container'>
 				<Routes>

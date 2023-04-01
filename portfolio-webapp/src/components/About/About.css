@@ -1,0 +1,25 @@
+h1,
+h2,
+h3,
+h4,
+h5 {
+	margin: 0;
+}
+
+h4 {
+	font-size: 0.6rem;
+	padding: 2px 20px;
+}
+
+.about {
+	padding: 10px 15px;
+	background-color: transparent;
+	color: white;
+}
+
+.about--image {
+	width: 100%;
+	border: 1px solid #cebc8180;
+	border-radius: 10px;
+	box-shadow: 2px 2px 12px #cebc8180;
+}

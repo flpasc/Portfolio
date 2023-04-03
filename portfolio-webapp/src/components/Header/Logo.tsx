@@ -21,9 +21,9 @@ export default function Logo() {
 	return (
 		<div className='logo'>
 			<Link to='/home'>
-				<TbMathLower className='blinking' size={10} />
+				<TbMathLower className='blinking' size={20} />
 				{glitchEffect}
-				<TbMathGreater className='blinking' size={10} />
+				<TbMathGreater className='blinking' size={20} />
 			</Link>
 		</div>
 	)

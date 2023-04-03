@@ -1,9 +1,15 @@
 .container {
-	background-image: url('./background.jpg');
-	height: 100vh;
+	/* background-image: url('./background.jpg'); */
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	background-color: #19181a;
+	height: 100%;
 	background-attachment: fixed;
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
 	z-index: -1;
+	padding-block: clamp(1rem, 1.5rem, 2rem);
 }

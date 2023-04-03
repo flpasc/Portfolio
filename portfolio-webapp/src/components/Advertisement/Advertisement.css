@@ -1,0 +1,9 @@
+.advertisement {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: rgb(59, 59, 245);
+	color: white;
+	height: 25px;
+	font-size: 0.8rem;
+}

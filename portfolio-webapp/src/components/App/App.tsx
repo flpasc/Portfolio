@@ -8,10 +8,12 @@ import Projects from '../Projects/Projects'
 import { Route, Routes } from 'react-router-dom'
 import Home from '../Home/Home'
 import ParticleBackground from '../ParticleBackground/ParticleBackground'
+import Advertisement from '../Advertisement/Advertisement'
 
 function App() {
 	return (
 		<>
+			<Advertisement />
 			<Header />
 			<div className='container'>
 				<Routes>

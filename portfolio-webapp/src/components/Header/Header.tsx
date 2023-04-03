@@ -8,7 +8,7 @@ export default function Header() {
 	return (
 		<div className='header'>
 			<Logo />
-			<User />
+			{/* <User /> */}
 			<Navbar />
 		</div>
 	)

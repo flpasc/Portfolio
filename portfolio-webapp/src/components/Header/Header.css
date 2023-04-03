@@ -1,17 +1,14 @@
 .header {
 	position: sticky;
 	top: 0;
-	padding: 2px 10px;
-	display: grid;
-	grid-template-columns: 1fr 2fr 1fr;
-	grid-template-rows: repeat(2, 1fr);
-	height: clamp(40px, 15vh, 60px);
+	display: flex;
+	padding-block: 1rem;
+
+	justify-content: space-around;
+	height: max-content;
+	width: 100%;
 
 	background: rgb(25, 24, 26);
-	background: linear-gradient(
-		59deg,
-		rgba(25, 24, 26, 0.776243802951753) 40%,
-		rgba(71, 151, 97, 0.645595033376809) 67%,
-		rgba(161, 110, 131, 0.4) 91%
-	);
+
+	box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.364);
 }

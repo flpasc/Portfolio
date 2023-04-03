@@ -27,10 +27,6 @@ export default function Navbar() {
 			<ul>
 				<CustomLink to='/about'>this.about</CustomLink>
 				<CustomLink to='/projects'>this.projects</CustomLink>
-				<CustomLink to='/shop'>this.shop</CustomLink>
-				<CustomLink to='/shoppingcart'>
-					<TbShoppingCart />
-				</CustomLink>
 			</ul>
 		</nav>
 	)

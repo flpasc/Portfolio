@@ -6,7 +6,7 @@ export default function About() {
 	const heading = '<About/>'
 	return (
 		<div className='about'>
-			<h4>{heading}</h4>
+			{/* <h4>{heading}</h4> */}
 			<img className='about--image' src='./screenshotSmall.png' alt='About this.dev' />
 		</div>
 	)

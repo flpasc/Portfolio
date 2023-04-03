@@ -15,6 +15,7 @@
     "react-router-dom": "^6.10.0",
     "react-teffex": "^1.0.5",
     "react-tsparticles": "^2.9.3",
+    "swiper": "^9.2.0",
     "tsparticles": "^2.9.3"
   },
   "devDependencies": {

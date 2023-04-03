@@ -1,0 +1,7 @@
+.slider--image {
+	width: 20em;
+	background-size: cover;
+	height: 15em;
+	background-position: center;
+	position: relative;
+}

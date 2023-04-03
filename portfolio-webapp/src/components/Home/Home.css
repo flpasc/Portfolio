@@ -1,12 +1,92 @@
 .home {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
 	height: 100vh;
 	color: white;
+	width: 100vw;
 }
 
 .home--welcome {
-	font-size: 1rem;
-	max-width: 35rem;
-	padding: 2rem;
+	font-size: 1em;
+	max-width: 30em;
+	height: 15em;
+
 	border: 1px solid rgba(0, 0, 0, 0.559);
 	box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.559);
+
+	padding: 3em;
+}
+
+.home--nav {
+	padding-block: 2rem 0;
+	gap: 10vw;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.home--latest {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	margin: 20px;
+	padding: 20px;
+	max-width: 90%;
+	height: 200em;
+}
+
+.home--swiper {
+	padding: 200px;
+	width: 100%;
+}
+
+.swiper--project {
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #19181a;
+}
+
+button {
+	/* color: white; */
+	padding: 1em 2em;
+	border: none;
+	border-radius: 10px;
+	background-color: #cebc81;
+	transition: background-color 0.2s ease-in-out, transform 0.3s ease-in-out,
+		box-shadow 0.3s ease-in-out, font-size 0.4s ease-in-out;
+}
+
+button:hover {
+	transform: scale(1.05);
+	box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.344);
+	font-size: 14px;
+}
+
+.btn-green {
+	background-color: #479761;
+}
+
+.btn-green:hover {
+	background-color: #71e596;
+}
+
+.btn-pink {
+	background-color: #a16e83;
+}
+
+.btn-pink:hover {
+	background-color: #ce8ea9;
+}
+.home--latest {
+	display: flex;
+}
+
+h3 {
+	padding-bottom: 2em;
+	text-decoration: underline;
+	color: rgb(208, 208, 208);
 }

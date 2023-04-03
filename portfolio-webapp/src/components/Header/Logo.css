@@ -11,12 +11,12 @@
 	align-items: center;
 	justify-content: center;
 	color: rgba(255, 255, 255, 0.772);
-	font-size: clamp(1rem, 1.2rem, 2rem);
-	transition: color 0.2s ease-in-out, transform 1s ease-in-out;
+	font-size: 1.3em;
+	transition: color 0.2s ease-in-out, transform 2s ease-in-out;
 }
 
 .logo:hover {
-	transform: scale(1.05);
+	transform: scale(1.2);
 }
 
 a:hover {

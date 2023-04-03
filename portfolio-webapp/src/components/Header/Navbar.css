@@ -15,11 +15,11 @@ a {
 	list-style: none;
 	display: flex;
 	font-weight: 900;
-	gap: clamp(0.5rem, 1rem, 2rem);
+	gap: 0.2em;
 }
 
 .navbar li {
-	font-size: clamp(0.3rem, 10px, 1rem);
+	font-size: 0.8em;
 
 	display: flex;
 	align-items: center;
@@ -33,8 +33,8 @@ a {
 
 .navbar li:hover {
 	background-color: #cebc81;
-	box-shadow: 1px 1px 4px #b19f9e;
-	transform: scale(1.05);
+	box-shadow: 1px 1px 2px #b19f9e50;
+	transform: scale(0.9);
 }
 
 .navbar li:hover > a {

@@ -8,23 +8,122 @@
 	width: 100vw;
 }
 
-.home--welcome {
-	font-size: 1em;
-	max-width: 30em;
-	height: 15em;
+.particles {
+	z-index: 1;
+}
 
+.home--landing {
+	z-index: 2;
+	flex-wrap: wrap;
+	min-width: 95vw;
+	min-height: 82vh;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
 	border: 1px solid rgba(0, 0, 0, 0.559);
 	box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.559);
+	background-color: #19181a6c;
 
 	padding: 3em;
 }
 
-.home--nav {
-	padding-block: 2rem 0;
-	gap: 10vw;
+.home--animation {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	height: 30em;
+	width: 30em;
+}
+
+.home--icon {
+	position: relative;
+	width: 15em;
+	bottom: 0;
+	animation: rotate 3s alternate infinite, jump 10s alternate infinite,
+		shake 10s ease-in-out infinite;
+	transition: bottom 4s ease-in-out, left 2s ease-in-out;
+}
+
+@keyframes rotate {
+	25% {
+		transform: rotate(6deg);
+	}
+	50% {
+		transform: rotate(1deg);
+	}
+	75% {
+		transform: rotate(-8deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}
+
+@keyframes shake {
+	5% {
+		left: 2px;
+	}
+	10% {
+		left: 5px;
+	}
+	20% {
+		left: 10px;
+	}
+	30% {
+		left: 5px;
+	}
+	40% {
+		left: 0px;
+	}
+	50% {
+		left: -5px;
+	}
+	60% {
+		left: -10px;
+	}
+	80% {
+		left: 5px;
+	}
+	90% {
+		left: 0px;
+	}
+}
+
+@keyframes jump {
+	20% {
+		bottom: 5em;
+	}
+	40% {
+		bottom: 2em;
+	}
+	60% {
+		bottom: 4em;
+	}
+	80% {
+		bottom: 6em;
+	}
+	100% {
+		bottom: 2em;
+	}
+}
+
+.home--welcome {
+	display: flex;
+	flex-direction: column;
+}
+
+.home--container {
+	font-size: 1.5em;
+	max-width: 19.3em;
+	height: 8em;
+}
+
+.home--nav {
+	justify-self: flex-end;
+	display: flex;
+	position: relative;
+	align-items: flex-end;
+	justify-content: space-between;
 }
 
 .home--latest {
@@ -40,6 +139,7 @@
 .home--swiper {
 	padding: 200px;
 	width: 100%;
+	/* background-color: black; */
 }
 
 .swiper--project {
@@ -51,23 +151,23 @@
 }
 
 button {
+	font-family: 'Roboto Mono', monospace;
 	/* color: white; */
 	padding: 1em 2em;
 	border: none;
 	border-radius: 10px;
 	background-color: #cebc81;
 	transition: background-color 0.2s ease-in-out, transform 0.3s ease-in-out,
-		box-shadow 0.3s ease-in-out, font-size 0.4s ease-in-out;
+		box-shadow 0.3s ease-in-out;
 }
 
 button:hover {
 	transform: scale(1.05);
 	box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.344);
-	font-size: 14px;
 }
 
 .btn-green {
-	background-color: #479761;
+	background-color: #64d989;
 }
 
 .btn-green:hover {
@@ -89,4 +189,6 @@ h3 {
 	padding-bottom: 2em;
 	text-decoration: underline;
 	color: rgb(208, 208, 208);
+	transition: opacity 2s ease-in-out;
+	opacity: 80%;
 }

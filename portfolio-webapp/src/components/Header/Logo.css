@@ -29,6 +29,6 @@ a:hover {
 
 @keyframes blinker {
 	50% {
-		opacity: 0;
+		opacity: 0%;
 	}
 }

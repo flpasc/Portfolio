@@ -7,20 +7,14 @@ import { loadFull } from 'tsparticles'
 import React from 'react'
 
 export default function ParticleBackground() {
-	const particlesInit = useCallback(async (engine: Engine) => {
-		console.log(engine)
-	}, [])
-
-	const particlesLoaded = useCallback(async (container: Container | undefined) => {
-		await console.log(container)
-	}, [])
+	const particlesInit = async (main) => {
+		console.log(main)
+		await loadFull(main)
+	}
 
 	return (
-		<Particles
-			id='tsparticles'
-			options={particlesConfig}
-			init={particlesInit}
-			loaded={particlesLoaded}
-		/>
+		<div className='particles'>
+			<Particles id='tsparticles' init={particlesInit} options={particlesConfig} />
+		</div>
 	)
 }

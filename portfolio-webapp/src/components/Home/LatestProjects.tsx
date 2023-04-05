@@ -1,6 +1,7 @@
 import React from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { EffectCoverflow, Navigation, Pagination, Scrollbar, A11y } from 'swiper'
+import { ProjectProps } from '../Projects/ProjectInterface'
 
 // Import Swiper styles
 import 'swiper/css'
@@ -13,14 +14,7 @@ import project_files from '../Projects/projectsFiles'
 import ProjectItem from '../Projects/ProjectItem'
 
 export default function LatestProjects() {
-	interface projectProps {
-		name: string
-		stack: string
-		img: string
-		github: string
-	}
-
-	const SwiperItems = project_files.projects.map((project): JSX.Element => {
+	const SwiperItems = project_files.projects.map((project: ProjectProps) => {
 		return (
 			<SwiperSlide key={project.name}>
 				<ProjectItem
@@ -42,12 +36,11 @@ export default function LatestProjects() {
 				effect={'coverflow'}
 				grabCursor={true}
 				centeredSlides={true}
-				slidesPerView={3}
+				slidesPerView={2}
 				coverflowEffect={{ rotate: 0, stretch: 0, depth: 100, modifier: 2.5 }}
 				modules={[EffectCoverflow, Pagination, Navigation]}
 				spaceBetween={30}
 				navigation={true}
-				pagination={{ clickable: true }}
 				scrollbar={{ draggable: true }}
 				onSwiper={(swiper) => console.log(swiper)}
 				onSlideChange={() => console.log('slide change')}>

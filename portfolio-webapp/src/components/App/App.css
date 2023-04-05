@@ -1,8 +1,9 @@
 .container {
-	/* background-image: url('./background.jpg'); */
+	/* background-image: url('./backgroundPattern.png'); */
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	z-index: -1;
 
 	background-color: #19181a;
 	height: 100%;

@@ -1,10 +1,10 @@
 const project_files = {
 	projects: [
 		{
-			name: 'Meme Generator',
-			stack: 'React, CSS, Javascript',
-			img: 'meme-generator.png',
-			github: 'https://github.com/flpasch/meme-generator',
+			name: 'Magic Mirror',
+			stack: 'Docker, MongoDB, Express, React, Node, REST API',
+			img: 'smart-mirror.png',
+			github: 'https://github.com/flpasch/MagicMirror',
 		},
 		{
 			name: 'Portfolio',
@@ -12,17 +12,18 @@ const project_files = {
 			img: 'portfolio.png',
 			github: 'https://github.com/flpasch/Portfolio',
 		},
-		{
-			name: 'Magic Mirror',
-			stack: 'Docker, MongoDB, Express, React, Node, REST API',
-			img: 'smart-mirror.png',
-			github: 'https://github.com/flpasch/MagicMirror',
-		},
+
 		{
 			name: 'Weather App',
 			stack: 'REST API, Javascript',
 			img: 'weather-app.png',
 			github: 'https://github.com/flpasch/odin-weather',
+		},
+		{
+			name: 'Meme Generator',
+			stack: 'React, CSS, Javascript',
+			img: 'meme-generator.png',
+			github: 'https://github.com/flpasch/meme-generator',
 		},
 		{
 			name: 'Tenzies Game',

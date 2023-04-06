@@ -117,7 +117,7 @@
 	margin: 20px;
 	padding: 20px;
 	max-width: 90%;
-	height: 200em;
+	height: 300em;
 }
 
 .home--swiper {
@@ -134,41 +134,9 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background-color: #4b385e00;
 	z-index: 1;
 }
 
-button {
-	font-family: 'Roboto Mono', monospace;
-	/* color: white; */
-	padding: 1em 2em;
-	border: none;
-	border-radius: 10px;
-	background-color: #cebc81;
-	transition: background-color 0.2s ease-in-out, transform 0.3s ease-in-out,
-		box-shadow 0.3s ease-in-out;
-}
-
-button:hover {
-	transform: scale(1.05);
-	box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.344);
-}
-
-.btn-green {
-	background-color: #64d989;
-}
-
-.btn-green:hover {
-	background-color: #71e596;
-}
-
-.btn-pink {
-	background-color: #a16e83;
-}
-
-.btn-pink:hover {
-	background-color: #ce8ea9;
-}
 .home--latest {
 	z-index: 1;
 	display: flex;

@@ -1,7 +1,7 @@
 .slider--container {
 	box-shadow: 0px 0px 20px #000000;
-	width: 20em;
-	height: 12em;
+	width: 30em;
+	height: 20em;
 	background-size: 100%;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -11,7 +11,7 @@
 	flex-direction: column;
 	align-items: flex-end;
 	justify-content: flex-end;
-	background-color: #19181a;
+	background-color: #7034ad00;
 }
 
 .project--container {
@@ -33,7 +33,7 @@
 	width: 100%;
 	height: 2em;
 	font-size: 0.8em;
-	background-color: rgba(0, 0, 0, 0.57);
+	background-color: rgba(0, 0, 0, 0.745);
 }
 
 .project--github {
@@ -52,7 +52,7 @@
 
 .project--github:hover {
 	background-color: #cebc81;
-	color: black;
+	color: rgb(0, 0, 0);
 	transform: scale(1.05);
 	box-shadow: 0px 0px 5px white;
 }

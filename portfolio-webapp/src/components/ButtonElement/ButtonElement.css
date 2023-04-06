@@ -1,0 +1,15 @@
+.customButton {
+	font-family: 'Roboto Mono', monospace;
+	color: black;
+	padding: 1em 2em;
+	border: none;
+	border-radius: 10px;
+	transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out,
+		box-shadow 0.2s ease-in-out, filter 0.2s ease-in-out;
+}
+
+.customButton:hover {
+	transform: scale(1.05);
+	box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.344);
+	filter: brightness(120%);
+}

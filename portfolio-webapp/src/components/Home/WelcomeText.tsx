@@ -1,5 +1,6 @@
 import React from 'react'
 import { Typewriter } from 'react-teffex'
+import ButtonElement from '../ButtonElement/ButtonElement'
 
 export default function WelcomeText() {
 	return (
@@ -32,8 +33,7 @@ export default function WelcomeText() {
 				/>
 			</div>
 			<div className='home--nav'>
-				<button className='btn-green'>Get in touch</button>
-				<button className='btn-pink'>Projects</button>
+				<ButtonElement title='Get in touch' color='#479761' />
 			</div>
 		</div>
 	)

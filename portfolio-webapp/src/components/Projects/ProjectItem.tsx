@@ -1,7 +1,7 @@
 import React from 'react'
 import { SwiperSlide } from 'swiper/react'
 import './Projects.css'
-import { ProjectProps } from './ProjectInterface'
+import { ProjectProps } from '../Interfaces/IProject'
 import { VscGithub } from 'react-icons/vsc'
 
 export default function ProjectItem({ name, stack, github, img }: ProjectProps) {

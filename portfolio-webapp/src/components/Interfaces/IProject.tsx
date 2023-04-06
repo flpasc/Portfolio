@@ -1,4 +1,4 @@
-export interface ProjectProps {
+export interface IProject {
 	name: string
 	stack: string
 	img: string

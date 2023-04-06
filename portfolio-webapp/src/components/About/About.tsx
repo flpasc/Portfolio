@@ -1,24 +1,15 @@
 import React, { useEffect, useCallback } from 'react'
 import { motion, useAnimation } from 'framer-motion'
 import { InView, useInView } from 'react-intersection-observer'
-import Title from '../TitleElement/'
+import Title from '../TitleElement/Title.jsx'
 import './About.css'
 
 export default function About() {
-	const aboutControl = useAnimation()
 	const textControl = useAnimation()
 	const imageControl = useAnimation()
-	const [aboutRef, aboutInView] = useInView()
+
 	const [textRef, textInView] = useInView()
 	const [imgRef, imgInView] = useInView()
-
-	useEffect(() => {
-		if (aboutInView) {
-			aboutControl.start('visible')
-		} else {
-			aboutControl.start('hidden')
-		}
-	}, [aboutControl, aboutInView])
 
 	useEffect(() => {
 		if (textInView) {
@@ -36,24 +27,18 @@ export default function About() {
 	}, [textControl, textInView])
 
 	const textVariant = {
-		visible: { opacity: 1, scale: 1, transition: { duration: 1 } },
-		hidden: { opacity: 0, scale: 0 },
-	}
-
-	const boxVariant = {
-		visible: { translateX: 0, transition: { duration: 1 } },
-		hidden: { translateX: -500 },
+		visible: { translateX: 0, opacity: 1, scale: 1, transition: { duration: 0.6 } },
+		hidden: { translateX: 200, opacity: 0.2, scale: 0.5 },
 	}
 
 	const imgVariant = {
-		visible: { translateX: 0, opacity: 1, scale: 1, transition: { duration: 2 } },
-		hidden: { translateX: 200, opacity: 0.2, scale: 0.2 },
+		visible: { translateX: 0, opacity: 1, scale: 1, transition: { duration: 1.5 } },
+		hidden: { translateX: 200, opacity: 0.2, scale: 0.5 },
 	}
-
 
 	return (
 		<div className='about'>
-			<Title
+			<Title title='About' />
 
 			<motion.div animate={textControl} initial='hidden' ref={textRef} variants={textVariant}>
 				<p className='about--text'>

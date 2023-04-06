@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { EffectCoverflow, Navigation, Pagination, Scrollbar, A11y } from 'swiper'
-import { ProjectProps } from '../Projects/ProjectInterface'
+import { IProject } from '../Interfaces/IProject'
 
 // Import Swiper styles
 import 'swiper/css'
@@ -14,6 +14,7 @@ import project_files from '../Projects/projectsFiles'
 import ProjectItem from '../Projects/ProjectItem'
 import { motion, useAnimation } from 'framer-motion'
 import { InView, useInView } from 'react-intersection-observer'
+import Title from '../TitleElement/Title'
 
 export default function LatestProjects() {
 	const headerControl = useAnimation()
@@ -43,7 +44,7 @@ export default function LatestProjects() {
 		hidden: { opacity: 0.2 },
 	}
 
-	const SwiperItems = project_files.projects.map((project: ProjectProps) => {
+	const SwiperItems = project_files.projects.map((project: IProject) => {
 		return (
 			<SwiperSlide key={project.name}>
 				<ProjectItem
@@ -59,9 +60,7 @@ export default function LatestProjects() {
 
 	return (
 		<div className='home--latest'>
-			<motion.div animate={headerControl} initial='hidden' ref={headerRef} variants={headerVariant}>
-				<h3>{headerText}</h3>
-			</motion.div>
+			<Title title='Expierience' />
 
 			<Swiper
 				className='home--swiper'

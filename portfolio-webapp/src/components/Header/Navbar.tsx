@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { ReactNode } from 'react'
 import './Navbar.css'
 import { TbShoppingCart } from 'react-icons/tb'
 import { Link, useMatch, useResolvedPath } from 'react-router-dom'
@@ -6,7 +6,7 @@ import { Link, useMatch, useResolvedPath } from 'react-router-dom'
 export default function Navbar() {
 	type CustomLinkProps = {
 		to: string
-		children: any
+		children: ReactNode
 	}
 
 	function CustomLink({ to, children, ...props }: CustomLinkProps) {

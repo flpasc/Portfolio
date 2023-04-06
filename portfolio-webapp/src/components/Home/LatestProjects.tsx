@@ -34,12 +34,12 @@ export default function LatestProjects() {
 
 	const headerText = '<Experience/>'
 	const headerVariant = {
-		visible: { translateX: 0, opacity: 1, transition: { duration: 2 } },
+		visible: { translateX: 0, opacity: 1, transition: { duration: 0.5 } },
 		hidden: { translateX: -400, opacity: 0.2 },
 	}
 
 	const sliderVariant = {
-		visible: { opacity: 1, transition: { duration: 2 } },
+		visible: { opacity: 1, transition: { duration: 0.5 } },
 		hidden: { opacity: 0.2 },
 	}
 

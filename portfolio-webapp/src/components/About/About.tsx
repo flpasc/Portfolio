@@ -36,12 +36,12 @@ export default function About() {
 	}, [textControl, textInView])
 
 	const textVariant = {
-		visible: { opacity: 1, scale: 1, transition: { duration: 2 } },
+		visible: { opacity: 1, scale: 1, transition: { duration: 1 } },
 		hidden: { opacity: 0, scale: 0 },
 	}
 
 	const boxVariant = {
-		visible: { translateX: 0, transition: { duration: 2 } },
+		visible: { translateX: 0, transition: { duration: 1 } },
 		hidden: { translateX: -500 },
 	}
 

@@ -1,7 +1,7 @@
 import React, { useEffect, useCallback } from 'react'
 import { motion, useAnimation } from 'framer-motion'
 import { InView, useInView } from 'react-intersection-observer'
-
+import Title from '../TitleElement/'
 import './About.css'
 
 export default function About() {
@@ -50,18 +50,15 @@ export default function About() {
 		hidden: { translateX: 200, opacity: 0.2, scale: 0.2 },
 	}
 
-	const heading = '<About/>'
 
 	return (
 		<div className='about'>
-			<motion.div animate={aboutControl} initial='hidden' ref={aboutRef} variants={boxVariant}>
-				<h4>{heading}</h4>
-			</motion.div>
+			<Title
 
 			<motion.div animate={textControl} initial='hidden' ref={textRef} variants={textVariant}>
 				<p className='about--text'>
 					I'm dedicated to staying at the forefront of web development trends and always eager to
-					learn. Discover more about my experience here.
+					learn.
 				</p>
 			</motion.div>
 

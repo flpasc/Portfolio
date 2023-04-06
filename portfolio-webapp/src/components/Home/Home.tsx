@@ -5,6 +5,7 @@ import WelcomeText from './WelcomeText'
 import LatestProjects from './LatestProjects'
 import ParticleBackground from '../ParticleBackground/ParticleBackground'
 import Animation from './Animation'
+import About from '../About/About'
 
 export default function Home() {
 	return (
@@ -14,6 +15,7 @@ export default function Home() {
 				<WelcomeText />
 				<Animation />
 			</div>
+			<About />
 			<LatestProjects />
 		</div>
 	)

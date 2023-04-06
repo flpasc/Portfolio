@@ -8,7 +8,6 @@ import React from 'react'
 
 export default function ParticleBackground() {
 	const particlesInit = async (main) => {
-		console.log(main)
 		await loadFull(main)
 	}
 

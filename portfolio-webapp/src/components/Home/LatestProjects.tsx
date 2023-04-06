@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { EffectCoverflow, Navigation, Pagination, Scrollbar, A11y } from 'swiper'
 import { ProjectProps } from '../Projects/ProjectInterface'
@@ -12,8 +12,37 @@ import 'swiper/css/effect-coverflow'
 
 import project_files from '../Projects/projectsFiles'
 import ProjectItem from '../Projects/ProjectItem'
+import { motion, useAnimation } from 'framer-motion'
+import { InView, useInView } from 'react-intersection-observer'
 
 export default function LatestProjects() {
+	const headerControl = useAnimation()
+	const sliderControl = useAnimation()
+	const [headerRef, headerInView] = useInView()
+	const [sliderRef, sliderInView] = useInView()
+
+	useEffect(() => {
+		console.log(headerInView)
+		if (headerInView) {
+			headerControl.start('visible')
+			sliderControl.start('visible')
+		} else {
+			headerControl.start('hidden')
+			sliderControl.start('hidden')
+		}
+	}, [headerControl, headerInView])
+
+	const headerText = '<Experience/>'
+	const headerVariant = {
+		visible: { translateX: 0, opacity: 1, transition: { duration: 2 } },
+		hidden: { translateX: -400, opacity: 0.2 },
+	}
+
+	const sliderVariant = {
+		visible: { opacity: 1, transition: { duration: 2 } },
+		hidden: { opacity: 0.2 },
+	}
+
 	const SwiperItems = project_files.projects.map((project: ProjectProps) => {
 		return (
 			<SwiperSlide key={project.name}>
@@ -30,7 +59,10 @@ export default function LatestProjects() {
 
 	return (
 		<div className='home--latest'>
-			<h3>Latest Projects</h3>
+			<motion.div animate={headerControl} initial='hidden' ref={headerRef} variants={headerVariant}>
+				<h3>{headerText}</h3>
+			</motion.div>
+
 			<Swiper
 				className='home--swiper'
 				effect={'coverflow'}
@@ -42,8 +74,8 @@ export default function LatestProjects() {
 				spaceBetween={30}
 				navigation={true}
 				scrollbar={{ draggable: true }}
-				onSwiper={(swiper) => console.log(swiper)}
-				onSlideChange={() => console.log('slide change')}>
+				onSwiper={(swiper) => console.log()}
+				onSlideChange={() => console.log()}>
 				{SwiperItems}
 			</Swiper>
 		</div>

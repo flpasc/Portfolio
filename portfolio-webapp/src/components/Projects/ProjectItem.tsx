@@ -5,9 +5,6 @@ import { ProjectProps } from './ProjectInterface'
 import { VscGithub } from 'react-icons/vsc'
 
 export default function ProjectItem({ name, stack, github, img }: ProjectProps) {
-	console.log(img)
-	// return cv-app.png
-
 	return (
 		<div className='swiper--project'>
 			<SwiperSlide>

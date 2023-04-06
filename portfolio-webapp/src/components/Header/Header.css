@@ -1,5 +1,5 @@
 .header {
-	z-index: 3;
+	z-index: 5;
 	position: sticky;
 	position: -webkit-sticky; /* Safari */
 

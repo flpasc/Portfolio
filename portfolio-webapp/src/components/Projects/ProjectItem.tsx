@@ -1,10 +1,10 @@
 import React from 'react'
 import { SwiperSlide } from 'swiper/react'
 import './Projects.css'
-import { ProjectProps } from '../Interfaces/IProject'
+import { IProject } from '../Interfaces/IProject'
 import { VscGithub } from 'react-icons/vsc'
 
-export default function ProjectItem({ name, stack, github, img }: ProjectProps) {
+export default function ProjectItem({ name, stack, github, img }: IProject) {
 	return (
 		<div className='swiper--project'>
 			<SwiperSlide>

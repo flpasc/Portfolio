@@ -1,32 +1,31 @@
-import React, { ReactNode } from 'react'
+import React, { useRef, ReactNode } from 'react'
 import './Navbar.css'
-import { TbShoppingCart } from 'react-icons/tb'
-import { Link, useMatch, useResolvedPath } from 'react-router-dom'
+import { ICustomLink } from '../Interfaces/ICustomLink'
 
-export default function Navbar() {
-	type CustomLinkProps = {
-		to: string
-		children: ReactNode
-	}
-
-	function CustomLink({ to, children, ...props }: CustomLinkProps) {
-		const resolvedPath = useResolvedPath(to)
-		const isActive = useMatch({ path: resolvedPath.pathname, end: true })
-
-		return (
-			<li className={isActive ? 'active' : ''}>
-				<Link to={to} {...props}>
-					{children}
-				</Link>
-			</li>
-		)
+export default function Navbar({ scrollAboutRef }: any) {
+	function CustomLink({
+		scrollRef,
+		scrollProjectsRef,
+		scrollAboutRef,
+		children,
+		...props
+	}: ICustomLink) {
+		const handleClick = () => {
+			console.log(scrollAboutRef)
+			if (scrollRef && scrollRef.current) {
+				scrollRef.current.scrollIntoView({ behavior: 'smooth' })
+			} else if (scrollProjectsRef && scrollProjectsRef.current && props.to === '/projects') {
+				scrollProjectsRef.current.scrollIntoView({ behavior: 'smooth' })
+			}
+		}
+		return <li onClick={handleClick}>{children}</li>
 	}
 
 	return (
 		<nav className='navbar'>
 			<ul>
-				<CustomLink to='/about'>this.about</CustomLink>
-				<CustomLink to='/projects'>this.projects</CustomLink>
+				<CustomLink scrollRef={scrollAboutRef}>this.about</CustomLink>
+				<CustomLink scrollRef={scrollAboutRef}>this.projects</CustomLink>
 			</ul>
 		</nav>
 	)

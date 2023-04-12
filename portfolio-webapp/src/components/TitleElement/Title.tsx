@@ -6,8 +6,6 @@ import { ITitle } from '../Interfaces/ITitle'
 import './Title.css'
 
 export default function Title({ title }: ITitle) {
-	console.log(title)
-
 	const titleControl = useAnimation()
 	const [aboutRef, aboutInView] = useInView()
 	const heading = `<${title}/>`

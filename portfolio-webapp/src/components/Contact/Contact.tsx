@@ -1,11 +1,11 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import './Contact.css'
 import Title from '../TitleElement/Title'
 import ButtonElement from '../ButtonElement/ButtonElement'
 
-export default function Contact() {
+export default function Contact({ scrollContactRef }: any) {
 	return (
-		<div className='contact'>
+		<div ref={scrollContactRef} className='contact'>
 			<Title title='Contact' />
 			<div className='contact--container'>
 				<p className='contact--text'>Iam available for hire, dont hesitate to reach out!</p>

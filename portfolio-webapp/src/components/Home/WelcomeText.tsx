@@ -2,7 +2,7 @@ import React from 'react'
 import { Typewriter } from 'react-teffex'
 import ButtonElement from '../ButtonElement/ButtonElement'
 
-export default function WelcomeText() {
+export default function WelcomeText({ scrollContactRef }: any) {
 	return (
 		<div className='home--welcome'>
 			<div className='home--container'>
@@ -33,7 +33,7 @@ export default function WelcomeText() {
 				/>
 			</div>
 			<div className='home--nav'>
-				<ButtonElement title='Get in touch' color='#479761' />
+				<ButtonElement title='Get in touch' color='#479761' scrollRef={scrollContactRef} />
 			</div>
 		</div>
 	)

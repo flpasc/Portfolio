@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import { Typewriter } from 'react-teffex'
 import './Home.css'
 import WelcomeText from './WelcomeText'
@@ -8,17 +8,19 @@ import Animation from './Animation'
 import About from '../About/About'
 import Contact from '../Contact/Contact'
 
-export default function Home() {
+export default function Home({ scrollAboutRef }: any) {
+	const scrollContactRef = useRef<HTMLInputElement>()
+
 	return (
 		<div className='home'>
 			<ParticleBackground />
 			<div className='home--landing'>
-				<WelcomeText />
+				<WelcomeText scrollContactRef={scrollContactRef} />
 				<Animation />
 			</div>
-			<About />
+			<About scrollAboutRef={scrollAboutRef} />
 			<LatestProjects />
-			<Contact />
+			<Contact scrollContactRef={scrollContactRef} />
 		</div>
 	)
 }

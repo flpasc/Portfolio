@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import { IButton } from '../Interfaces/IButton'
 
 import './ButtonElement.css'
@@ -8,9 +8,13 @@ export default function ButtonElement({
 	color = 'white',
 	className = 'customButton',
 	link,
+	scrollRef,
 }: IButton) {
 	const handleClick = () => {
-		window.open(link)
+		if (link) window.open(link)
+		if (scrollRef && scrollRef.current) {
+			scrollRef.current.scrollIntoView({ behavior: 'smooth' })
+		}
 	}
 
 	return (

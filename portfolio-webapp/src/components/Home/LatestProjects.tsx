@@ -23,7 +23,6 @@ export default function LatestProjects() {
 	const [sliderRef, sliderInView] = useInView()
 
 	useEffect(() => {
-		console.log(headerInView)
 		if (headerInView) {
 			headerControl.start('visible')
 			sliderControl.start('visible')

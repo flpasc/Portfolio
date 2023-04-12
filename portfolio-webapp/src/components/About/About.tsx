@@ -1,10 +1,10 @@
-import React, { useEffect, useCallback } from 'react'
+import React, { useEffect, useRef } from 'react'
 import { motion, useAnimation } from 'framer-motion'
 import { InView, useInView } from 'react-intersection-observer'
 import Title from '../TitleElement/Title.jsx'
 import './About.css'
 
-export default function About() {
+export default function About({ scrollAboutRef }: any) {
 	const textControl = useAnimation()
 	const imageControl = useAnimation()
 
@@ -37,7 +37,7 @@ export default function About() {
 	}
 
 	return (
-		<div className='about'>
+		<div ref={scrollAboutRef} className='about'>
 			<Title title='About' />
 
 			<motion.div animate={textControl} initial='hidden' ref={textRef} variants={textVariant}>

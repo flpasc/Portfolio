@@ -10,6 +10,8 @@ import Contact from '../Contact/Contact'
 
 export default function Home({ scrollAboutRef }: any) {
 	const scrollContactRef = useRef<HTMLInputElement>()
+	const scrollAboutRefs = useRef(scrollAboutRef)
+	console.log(scrollAboutRefs)
 
 	return (
 		<div className='home'>

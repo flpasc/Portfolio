@@ -3,19 +3,11 @@ import './Navbar.css'
 import { ICustomLink } from '../Interfaces/ICustomLink'
 
 export default function Navbar({ scrollAboutRef }: any) {
-	function CustomLink({
-		scrollRef,
-		scrollProjectsRef,
-		scrollAboutRef,
-		children,
-		...props
-	}: ICustomLink) {
+	function CustomLink({ scrollRef, children, ...props }: ICustomLink) {
 		const handleClick = () => {
 			console.log(scrollAboutRef)
 			if (scrollRef && scrollRef.current) {
 				scrollRef.current.scrollIntoView({ behavior: 'smooth' })
-			} else if (scrollProjectsRef && scrollProjectsRef.current && props.to === '/projects') {
-				scrollProjectsRef.current.scrollIntoView({ behavior: 'smooth' })
 			}
 		}
 		return <li onClick={handleClick}>{children}</li>

@@ -19,7 +19,10 @@ function App() {
 			<Header scrollAboutRef={scrollAboutRef} scrollProjectsRef={scrollProjectsRef} />
 			<div className='container'>
 				<Routes>
-					<Route path='/' element={<Home scrollRef={scrollAboutRef} />} />
+					<Route
+						path='/'
+						element={<Home scrollAboutRef={scrollAboutRef} scrollProjectsRef={scrollProjectsRef} />}
+					/>
 					<Route path='/home' element={<Home />} />
 				</Routes>
 			</div>

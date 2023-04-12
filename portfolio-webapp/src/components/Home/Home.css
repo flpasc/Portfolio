@@ -5,8 +5,9 @@
 	justify-content: flex-start;
 	align-items: center;
 	height: 100vh;
+	text-align: center;
 	color: rgb(181, 181, 181);
-	width: 100vw;
+	max-width: 100%;
 }
 
 .particles {
@@ -15,9 +16,11 @@
 
 .home--landing {
 	z-index: 2;
+	font-size: 0.6rem;
 	flex-wrap: wrap;
-	min-width: 95vw;
-	min-height: 84vh;
+	min-height: 85vh;
+	min-width: 90vw;
+	max-width: 95vw;
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
@@ -26,14 +29,15 @@
 	background-color: #00000031;
 
 	padding: 3em;
+	margin-bottom: 4em;
 }
 
 .home--animation {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	height: 30em;
-	width: 30em;
+	height: 10rem;
+	width: 10rem;
 	perspective: 2000px;
 	transform-style: preserve-3d;
 }
@@ -41,7 +45,7 @@
 .home--icon {
 	display: block;
 	position: relative;
-	width: 15em;
+	width: 13rem;
 	bottom: 0;
 	transform: scale(0.02) translateZ(200px);
 	animation: slide-in 6s forwards, appear 10s forwards,
@@ -103,6 +107,7 @@
 }
 
 .home--nav {
+	margin-top: 1.5rem;
 	justify-self: flex-end;
 	display: flex;
 	position: relative;

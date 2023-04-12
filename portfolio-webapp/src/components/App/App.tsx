@@ -11,14 +11,12 @@ import Advertisement from '../Advertisement/Advertisement'
 function App() {
 	return (
 		<>
-			<Advertisement />
+			{/* <Advertisement /> */}
 			<Header />
 			<div className='container'>
 				<Routes>
 					<Route path='/' element={<Home />} />
 					<Route path='/home' element={<Home />} />
-					<Route path='/about' element={<About />} />
-					<Route path='/projects' element={<Projects />} />
 				</Routes>
 			</div>
 		</>

@@ -1,4 +1,6 @@
 export interface IButton {
 	title: string
 	color?: string
+	className?: string
+	link?: string
 }

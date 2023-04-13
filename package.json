@@ -3,7 +3,7 @@
 	"private": true,
 	"version": "0.1.0",
 	"type": "module",
-	"homepage": "https://flpasc.github.io/",
+	"homepage": "https://flpasc.github.io/Portfolio",
 	"scripts": {
 		"predeploy": "npm run build",
 		"deploy": "gh-pages -d dist",

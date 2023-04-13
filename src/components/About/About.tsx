@@ -44,7 +44,7 @@ export default function About({ aboutRef }: any) {
 				I'm dedicated to staying at the forefront of web development trends and always eager to
 				learn.
 			</p>
-			<img className='about--image' src='/dist/screenshotSmall.png' alt='this.dev' />
+			<img className='about--image' src='screenshotSmall.png' alt='this.dev' />
 		</div>
 	)
 }

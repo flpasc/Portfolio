@@ -14,34 +14,6 @@
 	z-index: 1;
 }
 
-.home--landing {
-	z-index: 2;
-	font-size: 0.6rem;
-	flex-wrap: wrap;
-	min-height: 85vh;
-	min-width: 90vw;
-	max-width: 95vw;
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-	border: 1px solid rgba(0, 0, 0, 0.559);
-	box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.559);
-	background-color: #00000031;
-
-	padding: 3em;
-	margin-bottom: 4em;
-}
-
-.home--animation {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	height: 10rem;
-	width: 10rem;
-	perspective: 2000px;
-	transform-style: preserve-3d;
-}
-
 .home--icon {
 	display: block;
 	position: relative;

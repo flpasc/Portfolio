@@ -16,7 +16,7 @@ import { motion, useAnimation } from 'framer-motion'
 import { InView, useInView } from 'react-intersection-observer'
 import Title from '../TitleElement/Title'
 
-export default function LatestProjects() {
+export default function LatestProjects({ projectsRef }: any) {
 	const headerControl = useAnimation()
 	const sliderControl = useAnimation()
 	const [headerRef, headerInView] = useInView()
@@ -58,7 +58,7 @@ export default function LatestProjects() {
 	})
 
 	return (
-		<div className='home--latest'>
+		<div ref={projectsRef} className='home--latest'>
 			<Title title='Expierience' />
 
 			<Swiper

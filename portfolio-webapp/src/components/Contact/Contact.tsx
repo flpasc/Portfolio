@@ -3,9 +3,9 @@ import './Contact.css'
 import Title from '../TitleElement/Title'
 import ButtonElement from '../ButtonElement/ButtonElement'
 
-export default function Contact({ scrollContactRef }: any) {
+export default function Contact({ contactRef }: any) {
 	return (
-		<div ref={scrollContactRef} className='contact'>
+		<div ref={contactRef} className='contact'>
 			<Title title='Contact' />
 			<div className='contact--container'>
 				<p className='contact--text'>Iam available for hire, dont hesitate to reach out!</p>

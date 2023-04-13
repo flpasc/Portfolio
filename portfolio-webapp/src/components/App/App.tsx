@@ -9,21 +9,24 @@ import ParticleBackground from '../ParticleBackground/ParticleBackground'
 import Advertisement from '../Advertisement/Advertisement'
 
 function App() {
-	const scrollProjectsRef = useRef<HTMLInputElement>()
-	const scrollAboutRef = useRef<HTMLInputElement>()
+	const projectsRef = useRef<HTMLInputElement>()
+	const aboutRef = useRef<HTMLInputElement>()
+	const landingRef = useRef<HTMLInputElement>()
 
-	console.log(scrollProjectsRef)
 	return (
 		<>
 			{/* <Advertisement /> */}
-			<Header scrollAboutRef={scrollAboutRef} scrollProjectsRef={scrollProjectsRef} />
+			<Header aboutRef={aboutRef} projectsRef={projectsRef} landingRef={landingRef} />
 			<div className='container'>
 				<Routes>
 					<Route
 						path='/'
-						element={<Home scrollAboutRef={scrollAboutRef} scrollProjectsRef={scrollProjectsRef} />}
+						element={<Home landingRef={landingRef} projectsRef={projectsRef} aboutRef={aboutRef} />}
 					/>
-					<Route path='/home' element={<Home />} />
+					<Route
+						path='/home'
+						element={<Home landingRef={landingRef} projectsRef={projectsRef} aboutRef={aboutRef} />}
+					/>
 				</Routes>
 			</div>
 		</>

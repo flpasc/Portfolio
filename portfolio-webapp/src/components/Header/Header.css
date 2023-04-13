@@ -1,6 +1,6 @@
 .header {
 	z-index: 5;
-	position: sticky;
+	position: fixed;
 	position: -webkit-sticky; /* Safari */
 
 	top: 0;
@@ -13,4 +13,6 @@
 
 	box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.364);
 	background-color: #19181a;
+
+	color: #b19f9e;
 }

@@ -20,7 +20,7 @@ export default function Title({ title }: ITitle) {
 
 	const variant = {
 		visible: { translateX: 0, transition: { duration: 1 } },
-		hidden: { translateX: -500 },
+		hidden: { translateX: -240 },
 	}
 
 	return (

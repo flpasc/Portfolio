@@ -4,7 +4,7 @@ import { InView, useInView } from 'react-intersection-observer'
 import Title from '../TitleElement/Title.jsx'
 import './About.css'
 
-export default function About({ scrollAboutRef }: any) {
+export default function About({ aboutRef }: any) {
 	const textControl = useAnimation()
 	const imageControl = useAnimation()
 
@@ -28,28 +28,23 @@ export default function About({ scrollAboutRef }: any) {
 
 	const textVariant = {
 		visible: { translateX: 0, opacity: 1, scale: 1, transition: { duration: 0.6 } },
-		hidden: { translateX: 200, opacity: 0.2, scale: 0.5 },
+		hidden: { translateX: 200, opacity: 0.2, scale: 1 },
 	}
 
 	const imgVariant = {
 		visible: { translateX: 0, opacity: 1, scale: 1, transition: { duration: 1.5 } },
-		hidden: { translateX: 200, opacity: 0.2, scale: 0.5 },
+		hidden: { translateX: 200, opacity: 0.2, scale: 0.9 },
 	}
 
 	return (
-		<div ref={scrollAboutRef} className='about'>
+		<div ref={aboutRef} className='about'>
 			<Title title='About' />
 
-			<motion.div animate={textControl} initial='hidden' ref={textRef} variants={textVariant}>
-				<p className='about--text'>
-					I'm dedicated to staying at the forefront of web development trends and always eager to
-					learn.
-				</p>
-			</motion.div>
-
-			<motion.div animate={imageControl} initial='hidden' ref={imgRef} variants={imgVariant}>
-				<img className='about--image' src='./screenshotSmall.png' alt='this.dev' />
-			</motion.div>
+			<p className='about--text'>
+				I'm dedicated to staying at the forefront of web development trends and always eager to
+				learn.
+			</p>
+			<img className='about--image' src='./screenshotSmall.png' alt='this.dev' />
 		</div>
 	)
 }

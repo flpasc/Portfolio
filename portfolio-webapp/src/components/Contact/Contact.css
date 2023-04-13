@@ -12,13 +12,14 @@
 	margin-bottom: 3em;
 
 	display: flex;
+	flex-wrap: wrap;
 	align-items: center;
 	justify-content: space-around;
 }
 
 .contact--text {
 	text-align: left;
-	font-size: 1.5rem;
+	font-size: 1.2rem;
 	max-width: 50vw;
 }
 

@@ -21,6 +21,7 @@
 
 a:hover {
 	color: white;
+	cursor: pointer;
 }
 
 .blinking {

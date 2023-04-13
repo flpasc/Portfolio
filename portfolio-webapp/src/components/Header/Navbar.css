@@ -35,9 +35,10 @@ a {
 	background-color: #cebc81;
 	box-shadow: 1px 1px 2px #b19f9e50;
 	transform: scale(0.9);
+	cursor: pointer;
 }
 
-.navbar li:hover > a {
+.navbar li:hover {
 	color: black;
 }
 

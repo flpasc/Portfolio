@@ -1,0 +1,24 @@
+.advertisement {
+	position: relative;
+	z-index: 2;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	justify-content: center;
+	background-color: rgba(0, 0, 0, 0);
+	color: rgba(255, 255, 255, 0.448);
+	height: 30px;
+	width: 100%;
+	font-size: 0.8rem;
+	animation: glow 6s infinite;
+	text-shadow: none;
+	transition: color 10s ease-in-out, text-shadow 10s ease-in-out;
+}
+
+@keyframes glow {
+	50% {
+		color: rgba(68, 68, 68, 0.88);
+		text-shadow: 0 0 1px #fff, 0 0 1px #fff, 0 0 2px #fff, 0 0 2px #cebc813f, 0 0 4px #cebc816c,
+			0 0 3px #cebc818d, 0 0 3px #cebc81ab, 0 0 4px #cebc81b8;
+	}
+}

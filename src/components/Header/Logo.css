@@ -1,0 +1,35 @@
+.logo {
+	display: flex;
+	grid-area: 1 / 1 / -1 / 2;
+	justify-content: center;
+	align-items: center;
+	transition: transform 0.2s ease-in-out;
+}
+
+.logo a {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: rgba(255, 255, 255, 0.772);
+	font-size: 1.3em;
+	transition: color 0.2s ease-in-out, transform 2s ease-in-out;
+}
+
+.logo:hover {
+	transform: scale(1.2);
+}
+
+a:hover {
+	color: white;
+	cursor: pointer;
+}
+
+.blinking {
+	animation: blinker 3s alternate infinite;
+}
+
+@keyframes blinker {
+	50% {
+		opacity: 0%;
+	}
+}

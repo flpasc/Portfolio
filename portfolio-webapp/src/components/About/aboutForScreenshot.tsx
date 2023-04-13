@@ -1,4 +1,4 @@
-class FlorianSchoene {
+export class FlorianSchoene {
 	//Some info
 	//here
 	name: string

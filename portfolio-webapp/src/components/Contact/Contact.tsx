@@ -19,7 +19,7 @@ export default function Contact({ contactRef }: any) {
 					className='contact--github'
 					title='Github'
 					color='#CEBC81'
-					link='https://github.com/flpasch'
+					link='https://github.com/flpasc'
 				/>
 			</div>
 		</div>

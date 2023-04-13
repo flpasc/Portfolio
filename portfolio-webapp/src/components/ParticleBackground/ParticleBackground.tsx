@@ -7,13 +7,13 @@ import { loadFull } from 'tsparticles'
 import React from 'react'
 
 export default function ParticleBackground() {
-	const particlesInit = async (main) => {
+	const particlesInit = async (main: any) => {
 		await loadFull(main)
 	}
 
 	return (
 		<div className='particles'>
-			<Particles id='tsparticles' init={particlesInit} options={particlesConfig} />
+			<Particles id='tsparticles' init={particlesInit} options={particlesConfig as any} />
 		</div>
 	)
 }

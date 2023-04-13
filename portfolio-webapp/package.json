@@ -3,10 +3,10 @@
 	"private": true,
 	"version": "0.0.0",
 	"type": "module",
-	"homepage": "http://flpasch.github.io/portfolio",
+	"homepage": "http://flpasc.github.io/portfolio",
 	"scripts": {
 		"predeploy": "npm run build",
-		"deploy": "gh-pages -d build",
+		"deploy": "gh-pages -d dist",
 		"dev": "vite",
 		"build": "tsc && vite build",
 		"preview": "vite preview"

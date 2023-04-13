@@ -10,7 +10,7 @@ export default function ProjectItem({ name, stack, github, img }: IProject) {
 			<SwiperSlide>
 				<div className='project--container'>
 					<div className='project--title'>{name}</div>
-					<div style={{ backgroundImage: `url(${img})` }} className='slider--container'>
+					<div style={{ backgroundImage: `url(dist/${img})` }} className='slider--container'>
 						<div className='project--stack'>{stack}</div>
 					</div>
 					<a href={github} className='project--github'>

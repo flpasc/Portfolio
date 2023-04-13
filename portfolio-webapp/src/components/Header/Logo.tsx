@@ -8,10 +8,10 @@ import { ICustomLink } from '../Interfaces/ICustomLink'
 export default function Logo({ landingRef }: any) {
 	const CustomLogo = ({ scrollRef, ...props }: ICustomLink) => {
 		const handleClick = () => {
-			console.log(scrollRef)
-			if (scrollRef && scrollRef.current) {
-				scrollRef.current.scrollIntoView({ behavior: 'smooth' })
-			}
+			window.scrollTo({
+				top: 0,
+				behavior: 'smooth',
+			})
 		}
 
 		let glitchEffect = (

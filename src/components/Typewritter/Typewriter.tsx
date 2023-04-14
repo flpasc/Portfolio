@@ -2,8 +2,6 @@ import React, { useEffect, useState } from 'react'
 import { ITypewriter } from '../Interfaces/ITypewriter'
 import './Typewriter.css'
 
-import PropTypes from 'prop-types'
-
 export default function Typewriter({
 	text,
 	speed = 100,

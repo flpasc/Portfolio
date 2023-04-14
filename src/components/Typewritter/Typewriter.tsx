@@ -13,7 +13,7 @@ export default function Typewriter({
 	...otherProps
 }: ITypewriter) {
 	const [currentText, setCurrentText] = useState('')
-	const [timeoutId, setTimeoutId] = useState<NodeJS.Timeout | null>(null)
+	const [timeoutId, setTimeoutId] = useState<any | null>(null)
 	const [isTyping, setIsTyping] = useState(true)
 	const [currentIndex, setCurrentIndex] = useState(0)
 

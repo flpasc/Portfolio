@@ -3,7 +3,6 @@ import { ITypewriter } from '../Interfaces/ITypewriter'
 import './Typewriter.css'
 
 import PropTypes from 'prop-types'
-import './Typewriter.css'
 
 export default function Typewriter({
 	text,
@@ -16,15 +15,14 @@ export default function Typewriter({
 	...otherProps
 }: ITypewriter) {
 	const [currentText, setCurrentText] = useState('')
-	const [__timeout, set__Timeout] = useState(null)
+	const [timeoutId, setTimeoutId] = useState<NodeJS.Timeout | null>(null)
 	const [isTyping, setIsTyping] = useState(true)
 	const [currentIndex, setCurrentIndex] = useState(0)
 
 	useEffect(() => {
 		startTyping()
-
 		return () => {
-			__timeout && clearTimeout(__timeout)
+			timeoutId && clearTimeout(timeoutId)
 		}
 	}, [])
 
@@ -32,10 +30,10 @@ export default function Typewriter({
 		let rawText = getRawText()[currentIndex]
 		if (isTyping) {
 			if (currentText.length < rawText.length) {
-				set__Timeout(setTimeout(type, speed))
+				setTimeoutId(setTimeout(type, speed))
 			} else {
 				setIsTyping(false)
-				set__Timeout(setTimeout(erase, eraseDelay))
+				setTimeoutId(setTimeout(erase, eraseDelay))
 			}
 		} else {
 			if (currentText.length === 0) {
@@ -43,18 +41,18 @@ export default function Typewriter({
 				let index = currentIndex + 1 === textArray.length ? 0 : currentIndex + 1
 				if (index === currentIndex) {
 					setIsTyping(true)
-					setTimeout(startTyping, typingDelay)
+					setTimeoutId(setTimeout(startTyping, typingDelay))
 				} else {
-					setTimeout(() => setCurrentIndex(index), typingDelay)
+					setCurrentIndex(index)
 				}
 			} else {
-				set__Timeout(setTimeout(erase, eraseSpeed))
+				setTimeoutId(setTimeout(erase, eraseSpeed))
 			}
 		}
 		return () => {
-			__timeout && clearTimeout(__timeout)
+			timeoutId && clearTimeout(timeoutId)
 		}
-	}, [currentText])
+	}, [currentText, currentIndex, isTyping])
 
 	useEffect(() => {
 		if (!isTyping) {
@@ -62,7 +60,7 @@ export default function Typewriter({
 			startTyping()
 		}
 		return () => {
-			__timeout && clearTimeout(__timeout)
+			timeoutId && clearTimeout(timeoutId)
 		}
 	}, [currentIndex])
 
@@ -71,11 +69,7 @@ export default function Typewriter({
 	}
 
 	function startTyping() {
-		set__Timeout(
-			setTimeout(() => {
-				type()
-			}, speed)
-		)
+		setTimeoutId(setTimeout(type, speed))
 	}
 
 	function type() {
@@ -84,6 +78,9 @@ export default function Typewriter({
 		if (currentText.length < rawText.length) {
 			let displayText = rawText.substr(0, currentText.length + 1)
 			setCurrentText(displayText)
+		} else {
+			setIsTyping(false)
+			setTimeoutId(setTimeout(erase, eraseDelay))
 		}
 	}
 

@@ -9,18 +9,20 @@ export default function Contact({ contactRef }: any) {
 			<Title title='Contact' />
 			<div className='contact--container'>
 				<p className='contact--text'>Iam available for hire, dont hesitate to reach out!</p>
-				<ButtonElement
-					className='contact--linkedin'
-					title='Linkedin'
-					color='#a16e83'
-					link='https://www.linkedin.com/in/florian-schöne-a2b0b0272/'
-				/>
-				<ButtonElement
-					className='contact--github'
-					title='Github'
-					color='#CEBC81'
-					link='https://github.com/flpasc'
-				/>
+				<div className='contact--buttons'>
+					<ButtonElement
+						className='contact--linkedin'
+						title='Linkedin'
+						color='#a16e83'
+						link='https://www.linkedin.com/in/florian-schöne-a2b0b0272/'
+					/>
+					<ButtonElement
+						className='contact--github'
+						title='Github'
+						color='#CEBC81'
+						link='https://github.com/flpasc'
+					/>
+				</div>
 			</div>
 		</div>
 	)

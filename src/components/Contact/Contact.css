@@ -15,12 +15,20 @@
 	flex-wrap: wrap;
 	align-items: center;
 	justify-content: space-around;
+	padding: 3rem;
+	gap: 2rem;
 }
 
 .contact--text {
 	text-align: left;
 	font-size: 1.2rem;
 	max-width: 50vw;
+}
+
+.contact--buttons {
+	display: flex;
+	gap: 2rem;
+	flex-wrap: wrap;
 }
 
 .contact--linkedin,

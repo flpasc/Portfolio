@@ -6,8 +6,8 @@ export default function WelcomeText({ contactRef }: any) {
 	const [displayInfo, setDisplayInfo] = useState<boolean>(false)
 	const [displayAltText, setDisplayAltText] = useState<boolean>(false)
 
-	const infoTimer = 5000
-	const altTimer = 15000
+	const infoTimer = 6000
+	const altTimer = 18000
 
 	const greetingText = 'Welcome to my portfolio website!'
 	const infoText =
@@ -45,7 +45,7 @@ export default function WelcomeText({ contactRef }: any) {
 	return (
 		<div className='home--welcome'>
 			<div className='home--container'>
-				<Typewriter text={greetingText} eraseOn={false} cursor='' />
+				<Typewriter text={greetingText} eraseOn={false} cursor='' typingDelay={100} />
 				{displayInfo && (
 					<Typewriter typingDelay={10000} text={infoText} eraseOn={false} cursor='' />
 				)}

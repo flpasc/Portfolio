@@ -1,9 +1,8 @@
 import React, { useEffect } from 'react'
 import './Logo.css'
 import { TbMathLower, TbMathGreater } from 'react-icons/tb'
-import { Glitch } from 'react-teffex'
-import { Link } from 'react-router-dom'
 import { ICustomLink } from '../Interfaces/ICustomLink'
+import GlitchEffect from '../GlitchEffect/GlitchEffect'
 
 export default function Logo({ landingRef }: any) {
 	const CustomLogo = ({ scrollRef, ...props }: ICustomLink) => {
@@ -16,14 +15,7 @@ export default function Logo({ landingRef }: any) {
 
 		let glitchEffect = (
 			<div className='glitch'>
-				<Glitch
-					alphabet
-					buffer={10}
-					speed={100}
-					glitchSpeed={2000}
-					extendedAlphabet={true}
-					text={'flpasc'}
-				/>
+				<GlitchEffect text='flpasc' changeBackDelay={300} speed={410} chaos={6} />
 			</div>
 		)
 

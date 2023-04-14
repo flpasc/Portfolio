@@ -9,8 +9,6 @@ import LandingPage from '../LandingPage/LandingPage'
 export default function Home({ aboutRef, projectsRef, landingRef }: any) {
 	const contactRef = useRef<HTMLInputElement>()
 
-	console.log(aboutRef)
-
 	return (
 		<div className='home'>
 			<ParticleBackground />

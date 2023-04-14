@@ -67,6 +67,7 @@
 }
 
 .home--welcome {
+	text-align: left;
 	display: flex;
 	flex-direction: column;
 	width: 30em;

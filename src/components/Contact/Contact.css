@@ -26,6 +26,8 @@
 }
 
 .contact--buttons {
+	align-items: center;
+	justify-content: center;
 	display: flex;
 	gap: 2rem;
 	flex-wrap: wrap;

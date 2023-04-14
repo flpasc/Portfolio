@@ -6,7 +6,7 @@ export default function WelcomeText({ contactRef }: any) {
 	const [displayInfo, setDisplayInfo] = useState<boolean>(false)
 	const [displayAltText, setDisplayAltText] = useState<boolean>(false)
 
-	const infoTimer = 6000
+	const infoTimer = 8000
 	const altTimer = 18000
 
 	const greetingText = 'Welcome to my portfolio website!'
